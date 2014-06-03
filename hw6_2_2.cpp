@@ -63,23 +63,58 @@ int char_compare(const void *pa , const void *pb , void *param){
 	const studentGrade *student_B = (const studentGrade *) pb;
 	int result; 
 
-	int *pTemp_1 = const_cast <int*>(&(student_A -> studentID));
-	int *pTemp_2 = const_cast <int*>(&(student_B -> studentID));
-	int i = 0;
-	for ( ; i < 5; ++i)
-	{
-		pTemp_1++;
-		pTemp_2++;
-		if (*pTemp_1 > *pTemp_2)
-		{
-			return +1;
-		}
-		else if (*pTemp_1 < *pTemp_2)
-		{
-			return -1;
-		}
-	}
+	// int *pTemp_1 = const_cast <int*>(&(student_A -> studentID));
+	// int *pTemp_2 = const_cast <int*>(&(student_B -> studentID));
 
+	if ((student_A -> Avg_Grade) > (student_B -> Avg_Grade))
+	{
+		return +1;
+	}
+	else if ((student_A -> Avg_Grade) < (student_B -> Avg_Grade))
+	{
+		return -1;
+	}
+	if ((student_A -> hw2_Grade) > (student_B -> hw2_Grade))
+	{
+		return +1;
+	}
+	else if ((student_A -> hw2_Grade) < (student_B -> hw2_Grade))
+	{
+		return -1;
+	}
+	if ((student_A -> hw3_Grade) > (student_B -> hw3_Grade))
+	{
+		return +1;
+	}
+	else if ((student_A -> hw3_Grade) < (student_B -> hw3_Grade))
+	{
+		return -1;
+	}
+	if ((student_A -> hw5_Grade) > (student_B -> hw5_Grade))
+	{
+		return +1;
+	}
+	else if ((student_A -> hw5_Grade) < (student_B -> hw5_Grade))
+	{
+		return -1;
+	}
+	if ((student_A -> hw4_Grade) > (student_B -> hw4_Grade))
+	{
+		return +1;
+	}
+	else if ((student_A -> hw4_Grade) < (student_B -> hw4_Grade))
+	{
+		return -1;
+	}
+	if ((student_A -> hw1_Grade) > (student_B -> hw1_Grade))
+	{
+		return +1;
+	}
+	else if ((student_A -> hw1_Grade) < (student_B -> hw1_Grade))
+	{
+		return -1;
+	}
+	
 	string stu_A, stu_B;
 	stu_A = studentID_Hash[(student_A -> studentID)];
 	stu_B = studentID_Hash[(student_B -> studentID)];
